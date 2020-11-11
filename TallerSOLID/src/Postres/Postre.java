@@ -30,5 +30,12 @@ public class Postre {
     public void quitarAderezo(Aderezo aderezo){
         aderezos.remove(aderezo);
     }
+
+    public double getPrecioParcial() {
+        return precioParcial;
+    }
     
+    public int getNumAderezos(){
+        return aderezos.size();
+    }
 }
