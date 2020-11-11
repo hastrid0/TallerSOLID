@@ -5,7 +5,8 @@
  */
 package Postres;
 
-import Adicionales.Aderezo;
+import Adicionales.*;
+
 import java.util.ArrayList;
 
 /**
@@ -16,7 +17,7 @@ public class Postre {
     protected String sabor;
     protected double precioParcial;
     protected ArrayList<Aderezo> aderezos;
-    
+ 
     
     public ArrayList<Aderezo> getAderezos() {
       return aderezos;

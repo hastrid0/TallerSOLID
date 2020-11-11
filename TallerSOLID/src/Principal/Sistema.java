@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Principal;
-import Adicionales.Aderezo;
+import Adicionales.*;
 import Postres.*;
 import Procesos.*;
 import Leche.*;
@@ -20,9 +20,10 @@ public class Sistema {
         // Finalmente mostrar el precio final de cada uno
         LecheEntera leche = new LecheDeslactosada();
         ManejadorDeLeche mnj_leche = new ManejadorDeLeche();
-      
+           
         // Producir Helado
         Helado helado_vainilla = new Helado("Vainilla");
+        
         helado_vainilla.anadirAderezo(Aderezo.CREMA);
         helado_vainilla.anadirAderezo(Aderezo.FRUTILLA);
         System.out.println(helado_vainilla);
