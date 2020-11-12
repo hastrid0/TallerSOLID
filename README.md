@@ -5,7 +5,8 @@ La clase Postre se implemento por que helado e pastel tenian atributos y método
 La clase OperacionesAderezo era innecesaria y se repetia código, al implementar la clase postre se puede usar Single Responsability Principle para crear métodos independientes para añadir o quitar aderezos respectivamente en cada postre, y como helado e pastel heredeban de la clase, estos podian usarlos responsablemente en solo añadir o quitar aderezos.
 ## Punto 3
 Métodos calcularPrecioFinal() y  showPrecioFinal() están muy relacionados y no tienen que ver con el funcionamiento de una instancia Postre (responsabilidad única), mas bien la clase Postre y sus subclases guardan informacion sobre el producto, mientras que los metodos para calcular precio estan sujetos a otras variables como el precio de los impuestos o alguna politica de la empresa, tambien showPrecioFinal() no tiene nada que ver con relacion a los productos, usando el principio de cerrado/abierto se crea otra clase en cargo de las operaciones de precios y esta utiliza la clase abstracta Postre quedando abierta a ser utilizada por otros tipos de Postres pero cerrada a otros objetos.
-
+## Punto 4
+La clase Aderezo al ser enum se limita en cuanto a la implementacio de nuevos aderezos, si se llegara a añadir uno nuevo se tendría que modificar el código de esta clase inrrumpiedo el principio de Abierto/Cerrado, por ellos se abstrae la clase Aderezo permitiendo asi que que los distintos tipos sean subclases compartiendo la misma clase setNombre cumpliendo asi con el Principio de substitución de Liskov 
 ## Punto 5
 La clase LecheDeslactosada está lanzando errores que su clase padre no, esto ocurre porque la clase LecheEntera tiene dos métodos abstractos para el cambio de leche que se implementan
 en las clases hijas: usarHelado() y usarPastel(). Sin embargo, la torta no puede usar leche deslactosada porque se daña la mezcla y en LecheDeslactosada el método sobreescrito
